@@ -1,7 +1,9 @@
-import System.IO  
-import Control.Monad
+module Food
+  (Food_Type)
+  where
 
-data Food  = Food {
+
+data Food_Type  = Food {
   name :: String,
   -- Energy shall be only given in kJ. Showing everything in kcal might be made available as an option
   energy :: Float,
