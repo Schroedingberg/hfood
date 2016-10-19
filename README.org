@@ -1,0 +1,10 @@
+* Hfood - Diet tracking with rocket fuel (haskell)
+Hfood shall become a comprehensive framework for tracking your daily food intake.
+** hfood-lib
+   At the core, a library provides the datastructures and functions to fill them with data and query them for information.
+   A CLI-wrapper for this might as well be added.
+** hfood-web
+   To make it easily accessible for anyone and also (someday) usable on mobile devices, a neat web app is required.
+** eldiet
+   For the Emacs lovers (e.g. me): An Emacs package, possibly with nice org-mode
+   integration and options to e.g. show your calories in the modeline will be built.
