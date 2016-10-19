@@ -1,4 +1,4 @@
-module Webapp where
+module Databaseinterface where
 
 import Database.HDBC
 import Database.HDBC.Sqlite3
@@ -29,18 +29,17 @@ prepDB dbh =
 
 
 
--- addFood :: IConnection conn => conn -> Food -> IO ()
--- addFood dbh food =
---     run dbh "INSERT INTO Food (name, energy, protein, fat, carbs) \
---                 \VALUES (?, ?, ?, ?, ?)"
---     [toSql (name food),
---      toSql (energy food),
---      toSql (protein food),
---      toSql (fat food),
---      toSql (carbs food)]
---                     >> return ()
+addFood :: IConnection conn => conn -> Food -> IO ()
+addFood dbh food =
+  run dbh "INSERT INTO Food (name, energy, protein, fat, carbs) \
+          \VALUES (?, ?, ?, ?, ?)"
+  [toSql (name food),
+    toSql (energy food),
+    toSql (protein food),
+    toSql (fat food),
+    toSql (carbs food)]
+  >> return ()
        
-
 -- updateFood :: IConnection conn => conn -> Food -> IO ()
 -- updateFood dbh food =
 --     run dbh "UPDATE food SET energy = ?, protein = ?, fat = ?, carbs = ? WHERE name = ?"
